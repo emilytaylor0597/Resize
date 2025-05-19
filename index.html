@@ -10,25 +10,55 @@
       padding: 10px;
       height: 100%;
       font-family: sans-serif;
-      background: linear-gradient(135deg, #f47936, #26358C, #f47936);
+      background: linear-gradient(135deg, #f47936, #26358C);
+      color: white;
+    }
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resizable Box with Handle</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 10px;
+      height: 100%;
+      font-family: sans-serif;
+      background: linear-gradient(135deg, #f47936, #26358C);
       color: white;
     }
 
     .resizable-box {
+      position: relative;
       width: 200px;
       height: 200px;
       padding: 10px;
-      border: 2px solid #333;
+      border: 10px solid #333;
       resize: both;
       overflow: auto;
-      touch-action: none; /* Helps with touch responsiveness */
+      touch-action: none;
+      background-color: #f9f9f9;
+    }
+
+    .resize-handle {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 20px;
+      height: 20px;
+      background: linear-gradient(135deg, transparent 50%, #333 50%);
+      pointer-events: none; /* Allows touch to pass through to the native resize */
     }
   </style>
 </head>
 <body>
-  <h2>Touch-Resizable Box</h2>
+  <h2>Resizable Box with Triangle Handle</h2>
   <div class="resizable-box">
-    Resize me using the handle in the bottom-right corner!
+    Resize me using the triangle in the bottom-right corner!
+    <div class="resize-handle"></div>
   </div>
 </body>
 </html>
