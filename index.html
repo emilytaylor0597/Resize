@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resizable Box</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+    }
+
+    .resizable-box {
+      width: 200px;
+      height: 200px;
+      padding: 10px;
+      border: 2px solid #333;
+      resize: both;
+      overflow: auto;
+      touch-action: none; /* Helps with touch responsiveness */
+    }
+  </style>
+</head>
+<body>
+  <h2>Touch-Resizable Box</h2>
+  <div class="resizable-box">
+    Resize me using the handle in the bottom-right corner!
+  </div>
+</body>
+</html>
